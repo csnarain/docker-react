@@ -10,7 +10,8 @@ script:
 
 deploy:
   provider: azure_web_apps
-  username: "laks"
-  password: "L1fe@Sun"
-  site: "https://eutx-docker-react.azurewebsites.net"
-  env
+  username: $AZURE_WA_USERNAME
+  password: $AZURE_WA_PASSWORD
+  site: $AZURE_WA_SITE
+  on:
+    branch: master
