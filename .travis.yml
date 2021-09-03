@@ -13,6 +13,6 @@ deploy:
   username: $azure_deployment_user
   password: $azure_deployment_password
   site: $azure_wa_site
-  verbose: true
+  verbose: false
   on:
     branch: master
