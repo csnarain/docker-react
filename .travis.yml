@@ -12,7 +12,7 @@ deploy:
   provider: azure_web_apps
   username: $azure_deployment_user
   password: $azure_deployment_password
-  site: $AZURE_WA_SITE
+  site: $azure_wa_site
   verbose: true
   on:
     branch: master
