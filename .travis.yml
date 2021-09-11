@@ -10,9 +10,9 @@ script:
 
 deploy:
   provider: azure_web_apps
-  username: $azure_deployment_user
-  password: $azure_deployment_password
-  site: $azure_wa_site
-  verbose: false
+  username: $AZURE_SP_USERNAME
+  password: $AZURE_SP_PASSWORD
+  site: $AZURE_WEBAPP_NAME
+  verbose: true
   on:
     branch: master

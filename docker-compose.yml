@@ -21,20 +21,22 @@
 version: "3"
 services:
   web:
+    image: eutxacr.azurecr.io/dockerfrontendapp_web
 #    environment:
 #      - CHOKIDAR_USEPOLLING=true
-    build:
-      context: .
-      dockerfile: Dockerfile.Dev
+#    build:
+#      context: .
+#      dockerfile: Dockerfile.Dev
     ports:
-      - "8080:8080"
+      - "80:3000"
     volumes:
       - /home/node/app/node_modules
       - .:/home/node/app
   tests:
-    build:
-      context: .
-      dockerfile: Dockerfile.Dev
+    image: eutxacr.azurecr.io/dockerfrontendapp_tests
+#    build:
+#      context: .
+#      dockerfile: Dockerfile.Dev
     volumes:
       - /home/node/app/node_modules
       - .:/home/node/app
